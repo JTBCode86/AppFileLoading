@@ -1,4 +1,5 @@
 ﻿using System;
+using AppFileLoading.Entities;
 
 namespace AppFileLoading
 {
@@ -6,7 +7,14 @@ namespace AppFileLoading
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Diretorio origem: ");
+            string sourceFilePath = Console.ReadLine();
+            
+            Arquivo arquivo = new Arquivo(sourceFilePath);
+            arquivo.EscreverArquivo();
+
+            Console.WriteLine("Arquivo gerado com sucesso!");
+            Console.ReadLine(); 
         }
     }
 }
